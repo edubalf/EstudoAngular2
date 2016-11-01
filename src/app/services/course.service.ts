@@ -9,13 +9,13 @@ export class CourseService {
   constructor(private http: Http) { }
 
   getCourses() {
-    return this.http.get('http://abt-api.azurewebsites.net/api/courses')
+    return this.http.get('https://abt-api.azurewebsites.net/api/courses')
       .map(res => res.json())
       .catch(this.handleError);
   }
 
   getCourse(tag: string) {
-    return this.http.get('http://abt-api.azurewebsites.net/api/courses/' + tag)
+    return this.http.get('https://abt-api.azurewebsites.net/api/courses/' + tag)
       .map(res => res.json())
       .catch(this.handleError);
   }
